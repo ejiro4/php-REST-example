@@ -4,9 +4,20 @@ This is a simple sample php REST API example that demos how to authenticate and 
 
 Using the App
 ==============
+This Sample Code is provided 'as is' for the purposes of demonstrating how to consume Sabre Dev Studio REST API from a php Web application.
 
-This App is provided 'as is' for the purposes of demonstrating how to consume Sabre Dev Studio REST API from a php Web application.  
-This App requires to have an existing Sabre Dev Studio Key.
+A security flag exists on this module of code that prevents exposure of users app key on client browser.
+ 
+This means that the dsbridge.php file should NOT be called directly, but usually using an AJAX request from other web client, which is your main "site" under the same server (shared php session). 
+ 
+Include this instruction on your "index.php" file, that authorizes this page to makecalls to phpbridge.
+
+<?php
+                session_start();
+                $_SESSION['appInUse'] = 'any id will suffice';
+?>
+
+This requires to have an existing Sabre Dev Studio Key.
 
 For more information on registering to get a Test Key account please visit Sabre Dev Studio@http://developer.sabre.com and how to authenticate and build your key visit https://developer.sabre.com/docs/read/rest_basics/authentication
 
