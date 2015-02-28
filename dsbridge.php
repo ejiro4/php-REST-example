@@ -8,6 +8,11 @@
 		protected $_url = "https://api.test.sabre.com/";
 		//Go to https://developer.sabre.com/docs/read/rest_basics/authentication
 		//to Read more on building your APP Key.
+		//TO Generate your App Key below, 
+		//1 - Base64 your Client Id
+		//2 - Base64 Client Secret
+		//3 - Concat both Base64 values with a :
+		//4 - Base64 the concatenation.
 		protected $_dsAppKey = "your APP key here";
 		protected $_lastToken = null;
 		protected $_expireAt = null;
