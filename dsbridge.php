@@ -82,6 +82,11 @@
 			}
 		}
 		
+		
+		/*
+		Payload example will be the GET URI that is attached to the defined $this.url endpoint
+		v1/shop/flights/fares?origin=DFW&destination=NYC&lengthofstay=4
+		*/
 		public function sendRequest($payload='')
 		{
 			$retVal = 'null';
