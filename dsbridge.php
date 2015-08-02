@@ -47,7 +47,7 @@
 			}else{
 				$ch = curl_init();
 				curl_setopt($ch, CURLOPT_CAINFO, dirname(__FILE__)."/cacert.pem");
-				curl_setopt($ch, CURLOPT_URL, $this->_url . 'v1/auth/token');
+				curl_setopt($ch, CURLOPT_URL, $this->_url . 'v2/auth/token');
 				curl_setopt($ch, CURLOPT_POST, true);
 				//curl_setopt($ch, CURLOPT_HEADER, true);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/x-www-form-urlencoded;charset=UTF-8','Authorization:Basic ' . $this->_dsAppKey));
