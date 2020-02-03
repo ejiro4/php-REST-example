@@ -19,6 +19,7 @@
 		protected $_lastInfo = null;
 		protected $_debugMode = false;
 		protected $_numretries = 0;
+		protected $_myvalue = 10;
 		
 		private function checkExpDate(){
 			$retVal = false;
